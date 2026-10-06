@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "plasma585.polkit",
+  "name": "Plasma 585 Polkit Agent",
+  "version": "1.0.0",
+  "author": "Murat Shagirov",
+  "description": "Theme-aware authentication dialog for privileged actions with glowing password dots.",
+  "omarchy": {
+    "capabilities": [
+      "authentication"
+    ],
+    "clonedFrom": "omarchy.polkit"
+  },
+  "kinds": [
+    "service"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "PolkitAgent.qml"
+  }
+}

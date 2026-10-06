@@ -1,0 +1,11 @@
+[SddmGreeterTheme]
+Name=Plasma 585
+Description=Amber plasma glass and vintage synthesizer controls
+Author=Murat Shagirov
+License=MIT
+Type=sddm-theme
+Version=1.0
+MainScript=Main.qml
+Theme-Id=plasma-585
+Theme-API=2.0
+QtVersion=6

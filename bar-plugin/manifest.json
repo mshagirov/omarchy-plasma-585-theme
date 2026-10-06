@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "plasma585.bar",
+  "name": "Plasma 585 Bar",
+  "version": "1.0.0",
+  "author": "Murat Shagirov",
+  "description": "Plasma 585 status bar with synth-key widgets.",
+  "kinds": [
+    "bar"
+  ],
+  "entryPoints": {
+    "bar": "Bar.qml"
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.bar"
+  }
+}

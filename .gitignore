@@ -1,0 +1,14 @@
+# Editor / OS noise
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Local backups created by install.sh / uninstall.sh
+*.plasma585-backup-*
+*.plasma585-uninstall-*
+
+# Python bytecode from artwork/build-wordmarks.py
+__pycache__/
+*.pyc

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "plasma585.workspaces",
+  "name": "Plasma 585 Workspaces",
+  "version": "1.0.0",
+  "author": "Murat Shagirov",
+  "description": "Synth-key workspace indicators with brightness-based active state and amber occupancy markers.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Workspaces.qml"
+  },
+  "barWidget": {
+    "displayName": "Plasma 585 Workspaces",
+    "description": "Synth-key workspace indicators.",
+    "category": "Compositor",
+    "allowMultiple": false
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.workspaces"
+  }
+}

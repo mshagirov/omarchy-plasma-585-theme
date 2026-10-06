@@ -1,0 +1,103 @@
+# Black/gray synth panels, cream legends, orange/gold keys, dark green indicators.
+[bar]
+background = "#0e0e0e"
+background-alpha = 1.0
+text = "#d7cebc"
+active = "#ec934b"
+size-horizontal = 32
+
+[hyprland]
+active-border = "#8c8c8c #505050 45deg"
+active-border-foreground = "#b0aaa0"
+
+[controls]
+normal-color = "#d7cebc"
+normal-fill-alpha = 0.08
+normal-border = "#777777"
+normal-border-width = "1 1 3 1"
+normal-border-alpha = 0.6
+hover-cursor-color = "#ec934b"
+hover-cursor-fill-alpha = 0.10
+hover-cursor-border = "#888888"
+hover-cursor-border-width = "1 1 3 1"
+hover-cursor-border-alpha = 1.0
+focus-color = "#e9c66d"
+focus-fill-alpha = 0.10
+focus-border = "#b0aaa0"
+focus-border-width = 2
+focus-border-alpha = 1.0
+selected-color = "#ec934b"
+selected-fill-alpha = 0.12
+selected-border = "#ec934b"
+selected-border-width = "1 1 3 1"
+selected-border-alpha = 1.0
+pressed-fill-alpha = 0.28
+selection-fill-alpha = 0.28
+
+[popups]
+background = "#141414"
+background-alpha = 1.0
+text = "#d7cebc"
+border = "#777777"
+border-alpha = 0.75
+
+[tooltip]
+background = "#272727"
+text = "#e9dec8"
+border = "#777777"
+
+[notifications]
+background = "#141414"
+text = "#d7cebc"
+border = "#777777"
+countdown = "#7e9f64"
+
+[launcher]
+background = "#141414"
+background-alpha = 0.98
+text = "#d7cebc"
+border = "#777777"
+scrim = "#090909"
+scrim-alpha = 0.5
+selected-background = "#343434"
+selected-background-alpha = 1.0
+selected-text = "#ec934b"
+selected-border = "#777777"
+selected-border-alpha = 0.85
+
+[menu]
+background = "#141414"
+text = "#d7cebc"
+border = "#777777"
+scrim = "#090909"
+scrim-alpha = 0.5
+selected-background = "#343434"
+selected-background-alpha = 1.0
+selected-text = "#ec934b"
+selected-border = "#777777"
+selected-border-alpha = 0.85
+
+[polkit]
+background = "#100d09"
+text = "#ffd58a"
+text-error = "#ef8063"
+border = "#ffbe66"
+border-error = "#ef8063"
+accent = "#ffad42"
+
+[lock]
+background = "#100d09"
+background-alpha = 0.90
+text = "#ffe3ae"
+placeholder = "#ab997b"
+text-error = "#ef8063"
+border = "#ec934b #e9c66d 45deg"
+border-active = "#ffbe66 #ec934b 45deg"
+border-error = "#ef8063"
+border-alpha = 1.0
+selection = "#805225"
+selection-alpha = 0.3
+
+[image-picker]
+selected-border = "#ec934b"
+text = "#d7cebc"

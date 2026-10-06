@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 1920 1080">
+ <defs>
+  <radialGradient id="glass"><stop stop-color="#1c1915"/><stop offset=".65" stop-color="#101010"/><stop offset="1" stop-color="#070707"/></radialGradient>
+  <radialGradient id="orange"><stop stop-color="#e16b20" stop-opacity=".30"/><stop offset=".45" stop-color="#ae4818" stop-opacity=".13"/><stop offset="1" stop-color="#8c3616" stop-opacity="0"/></radialGradient>
+  <radialGradient id="green"><stop stop-color="#435a32" stop-opacity=".10"/><stop offset="1" stop-color="#344527" stop-opacity="0"/></radialGradient>
+  <radialGradient id="amber-screen"><stop stop-color="#e99a35" stop-opacity=".19"/><stop offset=".55" stop-color="#b56622" stop-opacity=".07"/><stop offset="1" stop-color="#a3531c" stop-opacity="0"/></radialGradient>
+  <filter id="screen-bloom" x="-30%" y="-50%" width="160%" height="200%"><feGaussianBlur stdDeviation="34"/></filter>
+  <linearGradient id="tube" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#9f3f18"/><stop offset=".45" stop-color="#ff933d"/><stop offset=".8" stop-color="#ffc276"/><stop offset="1" stop-color="#eb772a"/></linearGradient>
+  <filter id="bloom" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="halo" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="6"/></filter>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0H4" stroke="#000" stroke-opacity=".15"/></pattern>
+  <pattern id="matrix" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="6" cy="6" r=".65" fill="#cfab73" opacity=".07"/></pattern>
+  <path id="loop" d="M1475 185 H1640 Q1745 185 1745 290 V640 Q1745 745 1640 745 H1440 Q1335 745 1335 640 V330 Q1335 255 1410 255 H1570 Q1668 255 1668 353 V570 Q1668 669 1570 669 H1515 Q1412 669 1412 567 V399 Q1412 332 1479 332 H1519 Q1591 332 1591 404 V502 Q1591 557 1536 557"/>
+ </defs>
+ <rect width="1920" height="1080" fill="url(#glass)"/>
+ <ellipse cx="1540" cy="460" rx="650" ry="660" fill="url(#orange)"/>
+ <ellipse cx="250" cy="930" rx="620" ry="390" fill="url(#green)"/>
+ <ellipse cx="850" cy="445" rx="960" ry="580" fill="url(#amber-screen)"/>
+ <rect x="84" y="84" width="1752" height="912" rx="96" fill="none" stroke="#e69236" stroke-width="20" opacity=".32" filter="url(#screen-bloom)"/>
+ <rect x="84" y="84" width="1752" height="912" rx="96" fill="none" stroke="#a2632c" stroke-width="2" opacity=".23"/>
+ <rect x="42" y="42" width="1836" height="996" rx="44" fill="none" stroke="#4e4731" stroke-opacity=".32"/>
+ <rect x="50" y="50" width="1820" height="980" rx="39" fill="none" stroke="#070906" stroke-width="6"/>
+ <rect x="70" y="70" width="1780" height="940" rx="28" fill="url(#matrix)"/>
+ <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <use href="#loop" stroke="#f66b20" stroke-width="32" opacity=".56" filter="url(#bloom)"/>
+  <use href="#loop" stroke="#ff872f" stroke-width="13" opacity=".68" filter="url(#halo)"/>
+  <use href="#loop" stroke="#492714" stroke-width="13"/>
+  <use href="#loop" stroke="url(#tube)" stroke-width="5"/>
+  <use href="#loop" stroke="#ffce89" stroke-width="1.3" opacity=".85"/>
+  <path d="M150 881H443" stroke="#516c3c" stroke-width="10" opacity=".35" filter="url(#halo)"/>
+  <path d="M150 881H443" stroke="#6c8851" stroke-width="2"/>
+ </g>
+ <g font-family="monospace" font-size="11" letter-spacing="3" fill="#b3996d">
+  <text x="148" y="145" opacity=".65">PLASMA / 585</text>
+  <text x="148" y="168" font-size="8" opacity=".4">ANALOGUE PHOSPHOR SYSTEM</text>
+  <text x="148" y="920" font-size="9" opacity=".65">01 — SIGNAL / READY</text>
+  <text x="1480" y="858" font-size="9" opacity=".5">NEON · 585 nm</text>
+ </g>
+ <g transform="translate(1490 889)">
+   <rect width="43" height="13" rx="2" fill="#bd6940"/><rect x="51" width="43" height="13" rx="2" fill="#d08c45"/><rect x="102" width="43" height="13" rx="2" fill="#c6ad62"/><rect x="153" width="43" height="13" rx="2" fill="#51673e"/>
+ </g>
+ <rect width="1920" height="1080" fill="url(#scan)"/>
+</svg>

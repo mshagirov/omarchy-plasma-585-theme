@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "plasma585.lock",
+  "name": "Plasma 585 Lock Screen",
+  "version": "1.0.0",
+  "author": "Murat Shagirov",
+  "description": "Quickshell session lock with glowing password dots and separate password and fingerprint PAM flows.",
+  "omarchy": {
+    "capabilities": [
+      "authentication"
+    ],
+    "clonedFrom": "omarchy.lock"
+  },
+  "kinds": [
+    "service"
+  ],
+  "keepLoaded": true,
+  "entryPoints": {
+    "service": "Service.qml"
+  }
+}
