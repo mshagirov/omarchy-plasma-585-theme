@@ -1,5 +1,7 @@
 # Plasma 585
 
+> This is a 100% vibe-coded project. Models used 90% GPT-6 Astra Fast, MiMo-V2.6-Flash (5%), and DeepSeek v4.1 Flash (5%). Harness: OpenCode 1.18.34
+
 A warm, retro-futurist **Omarchy** theme built from vintage synthesizer
 hardware, amber CRT phosphor, and plasma-discharge glow.
 
