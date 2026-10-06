@@ -38,7 +38,7 @@ INSTALL_PLUGINS=1
 APPLY_LAYOUT=1
 
 usage() {
-  sed -n '2,20p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
+  sed -n '2,17p' "${BASH_SOURCE[0]}" | sed 's/^# \{0,1\}//'
 }
 
 while (($# > 0)); do
@@ -100,8 +100,8 @@ fi
 # -------------------------------------------------------------- shell config
 if ((INSTALL_PLUGINS || APPLY_LAYOUT)); then
   if [[ ! -f "$SHELL_JSON" ]]; then
-    default_shell="$OMARCHY_PATH/config/omarchy/shell.json"
-    if [[ -n "${OMARCHY_PATH:-}" && -f "$default_shell" ]]; then
+    default_shell="${OMARCHY_PATH:-}/config/omarchy/shell.json"
+    if [[ -f "$default_shell" ]]; then
       mkdir -p "$(dirname "$SHELL_JSON")"
       cp "$default_shell" "$SHELL_JSON"
     else

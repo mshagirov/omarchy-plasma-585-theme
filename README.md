@@ -98,8 +98,10 @@ restore the previous login theme.
 ./uninstall.sh
 ```
 
-Removes the theme and bundled plugins, restores the stock bar and stock
-lock/polkit services, and backs up `shell.json` first.
+Removes the theme and bundled plugins, points the bar back at Omarchy's stock
+bar, and re-enables the stock lock/polkit services. `shell.json` is backed up
+before the change; your other shell settings (idle, non-`plasma585` widgets) are
+left untouched.
 
 ## What's in the box
 
