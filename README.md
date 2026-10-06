@@ -152,10 +152,5 @@ keep just the palette.
 
 Theme code and artwork: MIT © 2026 Murat Shagirov.
 
-`artwork/plasma-globe-original.jpg` is "Plasma globe 60th.jpg" by
-[User:Colin](https://commons.wikimedia.org/wiki/User:Colin) (Wikimedia Commons),
-licensed [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). That
-file is **not** covered by the MIT license.
-
 The Omarchy angular wordmark is Omarchy's own artwork, used here to build
 wallpapers.
