@@ -27,7 +27,7 @@ SHELL_JSON="$HOME/.config/omarchy/shell.json"
 STAMP="$(date +%Y%m%d-%H%M%S)"
 
 THEME_ITEMS=(
-  colors.toml shell.toml hyprland.lua icons.theme
+  colors.toml shell.toml hyprland.lua icons.theme preview.png
   backgrounds artwork login
   bar-plugin workspaces-plugin lock-plugin polkit-plugin
 )
