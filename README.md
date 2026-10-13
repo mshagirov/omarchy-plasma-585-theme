@@ -136,6 +136,19 @@ python artwork/build-wordmarks.py
 
 ## Customizing
 
+### Shell panels
+
+Calendar, weather, audio, network, power, and other stock popup panels share
+near-black surfaces, cream legends, and orange hover, focus, and selected
+states. Their borders carry the synth palette from top to bottom: orange,
+mustard, cream, olive, and muted blue. The same border role is used by menus,
+notifications, and tooltips. These roles live in `shell.toml`, including the
+shared `[synth] layers` token.
+
+The bundled bar gives clock, weather, and the other controls graphite keycaps
+with cream labels and orange active states. To apply both theme
+tokens and updated bar code from this checkout, run `./install.sh --no-layout`.
+
 - **Palette** — edit `colors.toml`, then re-apply with
   `omarchy theme set "Plasma 585"`.
 - **Bar/control styling** — edit `shell.toml`; the shell picks it up on theme

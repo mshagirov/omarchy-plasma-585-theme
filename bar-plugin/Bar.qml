@@ -1846,9 +1846,9 @@ Item {
       anchors.topMargin: 4
       anchors.bottomMargin: 4
       radius: 2
-      color: slot.hovered || slot.panelOpen ? "#33302a" : "#202020"
+      color: slot.hovered || slot.panelOpen ? "#3b291b" : "#141414"
       border.width: 1
-      border.color: slot.hovered || slot.panelOpen ? "#ffd58a" : "#393632"
+      border.color: slot.hovered || slot.panelOpen ? "#ec934b" : "#63513b"
       layer.enabled: slot.hovered || slot.panelOpen
       layer.effect: MultiEffect {
         shadowEnabled: true
@@ -1858,15 +1858,6 @@ Item {
         shadowHorizontalOffset: 0
         shadowVerticalOffset: 0
         blurMax: 8
-      }
-      Rectangle {
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-        anchors.margins: 1
-        height: 2
-        color: slot.panelOpen ? "#ffd58a" : slot.synthAccent
-        opacity: slot.hovered || slot.panelOpen ? 1 : 0.7
       }
     }
 
@@ -2042,13 +2033,12 @@ Item {
     onModuleSettingsChanged: injectProps()
     onRegionChanged: Qt.callLater(injectProps)
 
-    // Tint native widget labels/icons without replacing their pointer handling,
-    // tooltip behavior, geometry, or original flat presentation.
+    // Tint native widget labels/icons without adding any surface or border.
     function tintFlatControls(item) {
       if (!item || !slot.flatControl) return
       if ("foreground" in item && "tooltipHovered" in item) {
         item.foreground = Qt.binding(function() {
-          return slot.hovered || slot.panelOpen ? "#ffd58a" : slot.synthAccent
+          return slot.hovered || slot.panelOpen ? "#ec934b" : "#e9dec8"
         })
         if ("activeColor" in item) item.activeColor = "#ffad42"
       }

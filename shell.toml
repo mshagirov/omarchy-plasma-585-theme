@@ -1,8 +1,13 @@
-# Black/gray synth panels, cream legends, orange/gold keys, dark green indicators.
+# Near-black synth panels, cream legends and orange interaction states.
+# Shared border roles reach every stock Quickshell panel through PopupCard.
+# Repeated stops hold the orange / mustard / cream / olive / blue bands.
+[synth]
+layers = "#ec934b #ec934b #c7a653 #c7a653 #e9dec8 #e9dec8 #718853 #718853 #698c9b #698c9b 90deg"
+
 [bar]
 background = "#0e0e0e"
 background-alpha = 1.0
-text = "#d7cebc"
+text = "#e9dec8"
 active = "#ec934b"
 size-horizontal = 32
 
@@ -11,23 +16,23 @@ active-border = "#8c8c8c #505050 45deg"
 active-border-foreground = "#b0aaa0"
 
 [controls]
-normal-color = "#d7cebc"
-normal-fill-alpha = 0.08
-normal-border = "#777777"
+normal-color = "#e9dec8"
+normal-fill-alpha = 0.04
+normal-border = "#63513b"
 normal-border-width = "1 1 3 1"
 normal-border-alpha = 0.6
 hover-cursor-color = "#ec934b"
-hover-cursor-fill-alpha = 0.10
-hover-cursor-border = "#888888"
+hover-cursor-fill-alpha = 0.22
+hover-cursor-border = "#ec934b"
 hover-cursor-border-width = "1 1 3 1"
 hover-cursor-border-alpha = 1.0
-focus-color = "#e9c66d"
-focus-fill-alpha = 0.10
-focus-border = "#b0aaa0"
+focus-color = "#ec934b"
+focus-fill-alpha = 0.22
+focus-border = "#ec934b"
 focus-border-width = 2
 focus-border-alpha = 1.0
 selected-color = "#ec934b"
-selected-fill-alpha = 0.12
+selected-fill-alpha = 0.26
 selected-border = "#ec934b"
 selected-border-width = "1 1 3 1"
 selected-border-alpha = 1.0
@@ -35,46 +40,51 @@ pressed-fill-alpha = 0.28
 selection-fill-alpha = 0.28
 
 [popups]
-background = "#141414"
+background = "#101010"
 background-alpha = 1.0
-text = "#d7cebc"
-border = "#777777"
-border-alpha = 0.75
+text = "#e9dec8"
+border = "synth.layers"
+border-width = "3 5 3 5"
+border-alpha = 1.0
 
 [tooltip]
-background = "#272727"
+background = "#101010"
 text = "#e9dec8"
-border = "#777777"
+border = "synth.layers"
+border-width = 2
 
 [notifications]
-background = "#141414"
-text = "#d7cebc"
-border = "#777777"
-countdown = "#7e9f64"
+background = "#101010"
+text = "#e9dec8"
+border = "synth.layers"
+border-width = "3 5 3 5"
+countdown = "#c7a653"
 
 [launcher]
-background = "#141414"
-background-alpha = 0.98
-text = "#d7cebc"
-border = "#777777"
+background = "#101010"
+background-alpha = 1.0
+text = "#e9dec8"
+border = "synth.layers"
+border-width = "3 5 3 5"
 scrim = "#090909"
 scrim-alpha = 0.5
-selected-background = "#343434"
+selected-background = "#3b291b"
 selected-background-alpha = 1.0
 selected-text = "#ec934b"
-selected-border = "#777777"
+selected-border = "#ec934b"
 selected-border-alpha = 0.85
 
 [menu]
-background = "#141414"
-text = "#d7cebc"
-border = "#777777"
+background = "#101010"
+text = "#e9dec8"
+border = "synth.layers"
+border-width = "3 5 3 5"
 scrim = "#090909"
 scrim-alpha = 0.5
-selected-background = "#343434"
+selected-background = "#3b291b"
 selected-background-alpha = 1.0
 selected-text = "#ec934b"
-selected-border = "#777777"
+selected-border = "#ec934b"
 selected-border-alpha = 0.85
 
 [polkit]
