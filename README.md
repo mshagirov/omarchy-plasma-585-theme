@@ -113,6 +113,7 @@ left untouched.
 | `icons.theme` | Selects the `Yaru-olive` icon theme |
 | `backgrounds/` | Five 3840 × 2160 wallpapers |
 | `artwork/` | Editable SVG sources + wallpaper build script |
+| `screensaver/` | Five wallpaper-derived text artworks + stock-effect cycling runner |
 | `bar-plugin/` | `plasma585.bar` — the synth-key bar |
 | `workspaces-plugin/` | `plasma585.workspaces` — workspace keycaps |
 | `lock-plugin/` | `plasma585.lock` — lock screen with glowing dots |
@@ -135,6 +136,37 @@ Rebuild the wordmark wallpapers from source:
 ```bash
 python artwork/build-wordmarks.py
 ```
+
+### Screensaver
+
+The installer enables five terminal-art versions of the wallpapers, cycling in
+filename order after each random effect. These use Omarchy's regular `ttfx`
+effects and standard fullscreen terminal launcher; idle and lock timings are
+unchanged. Text effects choose their usual colors, rather than reproducing the
+PNG colors exactly.
+
+A user-owned clone of `omarchy.idle` launches the bundled runner only while
+Plasma 585 is active, falling back to packaged Omarchy for other themes. Its
+timers and lock behavior are unchanged. Existing idle plugin clones are never
+overwritten. The stock launcher is reused with only its runner argument changed;
+no packaged files or global `PATH` settings are modified. Uninstalling restores
+the clone's original launch command and leaves the clone in place.
+
+Preview the cycling art with:
+
+```bash
+bash ~/.config/omarchy/themes/plasma-585/screensaver/launch.sh force
+```
+
+The standard menu/`omarchy launch screensaver` remains unchanged. Automatic idle
+activation uses the cycling artwork. To enable it after a git-based installation:
+
+```bash
+bash ~/.config/omarchy/themes/plasma-585/screensaver/install.sh
+```
+
+Rebuild the bundled text art with `python artwork/build-screensaver.py`
+(requires `rsvg-convert` and ImageMagick). No build tools are needed at runtime.
 
 ## Customizing
 

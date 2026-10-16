@@ -42,6 +42,18 @@ for suffix in bar workspaces lock polkit; do
 done
 log "Removed bundled plugins"
 
+idle_plugin="$PLUGINS_DIR/${USER:-$(id -un)}.idle"
+if [[ -f $idle_plugin/.plasma585-screensaver ]]; then
+  python - "$idle_plugin/Service.qml" <<'PY'
+from pathlib import Path
+import sys
+path = Path(sys.argv[1])
+source = path.read_text()
+path.write_text(source.replace("bash ~/.config/omarchy/themes/plasma-585/screensaver/launch.sh", "omarchy-launch-screensaver"))
+PY
+  rm "$idle_plugin/.plasma585-screensaver"
+fi
+
 rm -rf "$THEME_DIR"
 log "Removed $THEME_DIR"
 

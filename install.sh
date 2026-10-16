@@ -28,7 +28,7 @@ STAMP="$(date +%Y%m%d-%H%M%S)"
 
 THEME_ITEMS=(
   colors.toml shell.toml hyprland.lua icons.theme preview.png
-  backgrounds artwork login
+  backgrounds artwork login screensaver
   bar-plugin workspaces-plugin lock-plugin polkit-plugin
 )
 PLUGIN_SUFFIXES=(bar workspaces lock polkit)
@@ -82,6 +82,9 @@ if ((INSTALL_THEME)); then
     rm -rf "$THEME_DIR/$item"
     cp -R "$REPO_DIR/$item" "$THEME_DIR/$item"
   done
+  if ! bash "$THEME_DIR/screensaver/install.sh"; then
+    log "Screensaver override left unchanged; see the message above."
+  fi
 fi
 
 # ------------------------------------------------------------------- plugins
