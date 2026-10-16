@@ -111,7 +111,7 @@ left untouched.
 | `shell.toml` | Bar, controls, popups, lock, polkit, launcher tokens |
 | `hyprland.lua` | Amber window borders, rounding, edge shadow |
 | `icons.theme` | Selects the `Yaru-olive` icon theme |
-| `backgrounds/` | Three 3840 × 2160 wallpapers |
+| `backgrounds/` | Five 3840 × 2160 wallpapers |
 | `artwork/` | Editable SVG sources + wallpaper build script |
 | `bar-plugin/` | `plasma585.bar` — the synth-key bar |
 | `workspaces-plugin/` | `plasma585.workspaces` — workspace keycaps |
@@ -127,6 +127,8 @@ Cycle with `omarchy theme bg next`. Default is
 mustard, cream, olive, and muted-blue layers around the Omarchy wordmark. Also
 included: `01-plasma-chamber.png` (neon discharge tube) and
 `03-omarchy-amber-tubes.png` (glowing tube outline wordmark).
+MBIT variants are included as `04-mbit-synth-stripes.png` and
+`05-mbit-amber-tubes.png`, both captioned **MBI / NUS / SINGAPORE**.
 
 Rebuild the wordmark wallpapers from source:
 

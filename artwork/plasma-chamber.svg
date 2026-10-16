@@ -31,9 +31,8 @@
   <path d="M150 881H443" stroke="#6c8851" stroke-width="2"/>
  </g>
  <g font-family="monospace" font-size="11" letter-spacing="3" fill="#b3996d">
-  <text x="148" y="145" opacity=".65">PLASMA / 585</text>
+  <text x="148" y="145" opacity=".65">PLASMA 585</text>
   <text x="148" y="168" font-size="8" opacity=".4">ANALOGUE PHOSPHOR SYSTEM</text>
-  <text x="148" y="920" font-size="9" opacity=".65">01 — SIGNAL / READY</text>
   <text x="1480" y="858" font-size="9" opacity=".5">NEON · 585 nm</text>
  </g>
  <g transform="translate(1490 889)">

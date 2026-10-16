@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Render Plasma 585's two alternate 4K wallpapers from Omarchy's wordmark."""
+"""Render Plasma 585's Omarchy and MBIT wordmark wallpapers at 4K."""
 from pathlib import Path
 import subprocess
 import xml.etree.ElementTree as ET
 
 HERE = Path(__file__).resolve().parent
 THEME = HERE.parent
-source = HERE / "omarchy-wordmark.svg"
-logo = ET.parse(source).getroot()
-paths = "".join(
-    '<path d="' + p.attrib["d"] + '" fill-rule="evenodd"/>'
-    for p in logo.iter("{http://www.w3.org/2000/svg}path")
-)
-defs = f'''<defs>
+def wordmark_paths(name):
+    logo = ET.parse(HERE / name).getroot()
+    for path in logo.iter("{http://www.w3.org/2000/svg}path"):
+        path.set("fill-rule", "evenodd")
+    return "".join(
+        ET.tostring(p, encoding="unicode")
+        for p in logo.iter("{http://www.w3.org/2000/svg}path")
+    )
+
+
+defs = '''<defs>
  <g id="logo">{paths}</g>
  <clipPath id="letters">{paths}</clipPath>
  <radialGradient id="ground"><stop stop-color="#22201c"/><stop offset=".55" stop-color="#101010"/><stop offset="1" stop-color="#050505"/></radialGradient>
@@ -32,14 +36,20 @@ tubes = '''<use href="#logo" fill="none" stroke="#f68a29" stroke-width="16" opac
 <use href="#logo" fill="#100d09" stroke="#593219" stroke-width="7"/>
 <use href="#logo" fill="none" stroke="url(#tube)" stroke-width="3.2"/>
 <use href="#logo" fill="none" stroke="#ffe1a2" stroke-width=".85"/>'''
-for name, art, label in [
-    ("00-omarchy-synth-stripes", striped, "RHYTHM / POLYPHONIC"),
-    ("03-omarchy-amber-tubes", tubes, "AMBER / DISCHARGE"),
+for name, art, wordmark, transform, caption in [
+    ("00-omarchy-synth-stripes", striped, "omarchy-wordmark.svg", "translate(352.5 397.5)", ""),
+    ("03-omarchy-amber-tubes", tubes, "omarchy-wordmark.svg", "translate(352.5 397.5)", ""),
+    ("04-mbit-synth-stripes", striped, "mbit-wordmark.svg", "translate(537 369) scale(1.2)", "MBI / NUS / SINGAPORE"),
+    ("05-mbit-amber-tubes", tubes, "mbit-wordmark.svg", "translate(537 369) scale(1.2)", "MBI / NUS / SINGAPORE"),
 ]:
+    subtitle = (
+        f'<text x="960" y="773" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="4" fill="#91704a" opacity=".6">{caption}</text>'
+        if caption else ""
+    )
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 1920 1080">
-{defs}<rect width="1920" height="1080" fill="url(#ground)"/>
-<g transform="translate(352.5 397.5)">{art}</g>
-<text x="960" y="773" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="4" fill="#91704a" opacity=".6">PLASMA 585 / {label}</text>
+{defs.format(paths=wordmark_paths(wordmark))}<rect width="1920" height="1080" fill="url(#ground)"/>
+<g transform="{transform}">{art}</g>
+{subtitle}
 <rect width="1920" height="1080" fill="url(#scan)"/></svg>'''
     svg_path = HERE / (name + ".svg")
     svg_path.write_text(svg)
